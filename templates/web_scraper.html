@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block title  %}
+    Web Scraper - Admin Page
+{% endblock %}
+{% block body %}
+    
+<form method="post" action="">
+    {% csrf_token %}
+
+
+    <input type="submit">
+</input>
+
+{{ data }}
+
+{% endblock %}

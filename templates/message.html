@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block title  %}
+    Administration Private Message
+{% endblock %}
+
+{% block body %}
+
+
+    De : 
+    {{ message.from_username }}
+    <br>
+    A : 
+    {{ message.to_username }}
+
+
+    <br>    
+    Titre : 
+    {{ message.title }}
+    <br>
+    Message : 
+    {{ message.message }}
+
+{% if message.title == "A new user want to register" %}
+<br>
+Do you want to register this user?
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" name="yes" value="Yes">
+
+        <input type="submit" name="no" value="No">
+    </form>
+{% endif %}
+
+{% endblock %}

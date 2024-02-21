@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+
+
+{% block title  %}
+    Message(s) in Box
+{% endblock %}
+{% block body %}
+    
+    {% for i in data %}
+ 
+        {{i.from_username  }}
+        <br>
+       <a href="/user/box/"> {{i.title  }} </a>
+
+    {% endfor %}
+{% endblock %}

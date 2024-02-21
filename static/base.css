@@ -1,0 +1,40 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+ }
+ 
+a{
+    color: black;
+    text-decoration: none;
+}
+
+#container{
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 100px;
+    background-color: rgb(186, 186, 209);
+
+}
+
+.left
+{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    justify-content: space-between;
+}
+
+
+.dot {
+    height: 20px;
+    width: 20px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+  } 
