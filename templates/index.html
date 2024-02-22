@@ -1,0 +1,37 @@
+
+
+
+{% extends "base.html" %}
+
+{% block title  %}
+
+
+    Index page
+{% endblock %}
+{% block body %}
+
+
+
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'index.css' %}">
+
+
+ <a href="/game/randomizer/">The Game</a>
+    <br>
+    {% if request.user.is_authenticated  == False%}
+
+ <a href="/user/sign-in/">Request a registration</a> 
+<br>
+   
+
+<a href="/user/login/">Login</a>
+<br> 
+{% endif %}
+{% if request.user.is_authenticated  == True%}
+<a href="/user/list_users/">list of Users</a>
+<br>
+<a href="/user/account/">Account</a>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+
+
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'play_ai.css' %}">
+{% endblock%}
+
+
+
+
+
+{% block title  %}
+    - Play
+{% endblock %}
+
+{% block body %}
+
+<div id="game_container">
+    <div class="game_inside">
+
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ classic_question.as_p }}
+        {{ generic_question }}
+
+        
+        <input type="submit" name="send" value="Send">
+    </form>
+
+    </div>
+
+
+    <div class="game_inside">
+
+
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ integer_question.as_p }}
+        {{ integer }} 
+
+        <input type="submit" name="send" value="Send">
+    </form>
+</div>
+
+    <div class="game_inside">
+
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ career_data_questions.as_p }}
+        {{career_data_response}}
+        <input type="submit" name="send" value="Send">
+    </form>
+
+    <br>
+
+
+
+</div>
+</div>
+
+<div id="settings">
+    <div id="game_setting">
+        {{game_setting|linebreaks}}
+    </div>
+</div>
+{% endblock %}

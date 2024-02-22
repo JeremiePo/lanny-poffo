@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block title  %}
+    Administration Private Message
+{% endblock %}
+
+{% block body %}
+
+
+    {% for message, number in message %}
+    <input type="checkbox" name="message" value="fhuef"">
+    <a href="Message/{{number}}">
+        {{ message }}</a>
+
+            {% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block title  %}
+    - Play
+{% endblock %}
+
+{% block body %}
+
+<form method="post" action="/game/play/">
+    {% csrf_token %}
+    {{ classic_question.as_p }}
+
+    <input type="submit" name="send" value="Send">
+</form>
+
+
+{% endblock %}
